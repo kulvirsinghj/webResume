@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Resume / CV — Kulvir Jandu" />
+    <title>Kulvir Jandu — Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container card" id="page">
+        <header>
+            <div class="profile">
+                <div>
+                <img src="IMG_20250330_202257_241.jpg" alt="Kulvir Jandu" class="avatar" style="object-fit:cover;object-position:top">
+                </div>
+                <div>
+                    <h1 class="name">Kulvir Jandu</h1>
+                    <div class="role">IT Professional • Cloud & DevOps enthusiast</div>
+                    <p class="lead">7+ years in IT. Specialised in systems administration, network tooling, and
+                        automation. Looking for roles where I can design resilient infrastructure and improve
+                        operational efficiency.</p>
+                </div>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px">
+                <div style="display:flex;gap:8px">
+                    <a class="btn" href="#download" onclick="downloadPDF(event)">Download PDF</a>
+                    <button id="themeToggle" class="btn"
+                        style="background:transparent;border:1px solid rgba(0,0,0,0.06);color:inherit">Dark
+                        Mode</button>
+                </div>
+                <div class="muted">Updated: <span id="updatedDate"></span></div>
+            </div>
+        </header>
+
+        <main>
+            <section>
+                <div class="card">
+                    <h3 class="section-title">Experience</h3>
+                    <div class="experience">
+                        <article class="job">
+                            <h4>ICT Administrator — Consunet</h4>
+                            <div class="meta">May 2025 — Present · Adelaide, AU</div>
+                            <p>Delivering end user support and security administration, supporting secure systems
+                                management using Fortinet tools,
+                                Microsoft Entra, and Linux based enforcement, whilst also providing structure and
+                                guidance to team members within a
+                                high responsibility technical environment.</p>
+                        </article>
+
+                        <article class="job">
+                            <h4>Senior Systems Engineer — Datacom (previous)</h4>
+                            <div class="meta">Nov 2023 — April 2025</div>
+                            <p>Delivered high-level technical support and enterprise IT management, specialising in
+                                Azure, security, and automation. Led business-critical projects, optimised
+                                infrastructure performance, and ensured system reliability, security, and compliance
+                                across the organisation.</p>
+                        </article>
+
+                        <article class="job">
+                            <h4>Systems Engineer — Datacom (previous)</h4>
+                            <div class="meta">Aug 2020 — Nov 2023</div>
+                            <p>Provided Level 2 technical support and managed enterprise Microsoft environments,
+                                including Office 365, Azure, and Intune. Led infrastructure projects, asset management,
+                                and Windows upgrades, driving efficiency and operational improvements across Datacom
+                                entities.</p>
+                        </article>
+
+                        <article class="job">
+                            <h4>Contact Centre Systems Support Specialist — Datacom (previous)</h4>
+                            <div class="meta">Sept 2018 — Aug 2020</div>
+                            <p>Performed on-site and remote technical support for H&L Australia’s hospitality POS
+                                systems, configuring, installing, and
+                                maintaining hardware, software, and networks. Provided troubleshooting, database
+                                modifications, and end-user training
+                                to ensure seamless system operation for clients.</p>
+                        </article>
+
+                        <article class="job">
+                            <h4>Senior Field Technician — H&L Australia (previous)</h4>
+                            <div class="meta">June 2015 — Aug 2018</div>
+                            <p>Provided technical support and IT services to staff and students at the University of
+                                South Australia, managing
+                                hardware and software issues, maintaining IT infrastructure, and ensuring smooth
+                                operation of campus technology.</p>
+                        </article>
+
+                        <article class="job">
+                            <h4>Level 1 Technical Support — H&L Australia (previous)</h4>
+                            <div class="meta">Aug 2014 — June 2015</div>
+                            <p>Provided help desk support for H&L Australia’s hospitality Point of Sale System,
+                                assisting clients with troubleshooting
+                                software, hardware and network issues over the phone. Delivered Technical guidance,
+                                resolved service requests and
+                                ensured minimal downtime for restaurants, bars and hotels.
+                            </p>
+                        </article>
+
+                        <article class="job">
+                            <h4>Customer Service Officer — Internode (previous)</h4>
+                            <div class="meta">Sept 2012 — July 2014</div>
+                            <p>Providing Level 1 support to residential and business customers regarding their internet
+                                services, troubleshooting ADSL,
+                                WDSL, Fibre, PSTN, VoIP, and email faults. Assisted customers with email and wireless
+                                configuration, mentored new staff,
+                                provided internal support, and maintained KPIs, including After Call Work time, NPS, and
+                                Adherence.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:12px">
+                    <h3 class="section-title">Projects</h3>
+                    <div class="projects">
+                        <div class="project">
+                            <strong>Pi-hole & Unbound in Proxmox LXC</strong>
+                            <div class="muted">Self-hosted DNS + caching resolver with optional VPN routing and
+                                split-tunnel controls.</div>
+                            <div style="margin-top:6px"><a href="#">View repo</a></div>
+                        </div>
+
+                        <div class="project">
+                            <strong>AZ-104 Study Dashboard</strong>
+                            <div class="muted">Custom study planner and mock exam tracker used to prepare for Azure
+                                Administrator certification.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:12px">
+                    <h3 class="section-title">Education</h3>
+                    <div>
+                        <strong>Diploma / Certs</strong>
+                        <ul class="muted" style="margin-top:6px">
+                            <li>CompTIA Security+</li>
+                            <li>Microsoft Certified: Azure Fundamentals (AZ-900)</li>
+                            <li>Microsoft Certified: Security, Compliance, and Identity Fundamentals (SC-900)</li>
+                            <li>Microsoft 365 Certified: Fundamentals (MS-900)</li>
+                            <li>Microsoft Certified: Azure Administrator Associate (AZ-104) - In progress</li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+
+            <aside>
+                <div class="card">
+                    <h3 class="section-title">Contact</h3>
+                    <div class="contact-list">
+                        <!-- <div class="contact-item"><strong>Email</strong><span class="muted">kulv.jandu@gmail.com</span></div> -->
+                        <!-- <div class="contact-item"><strong>Phone</strong><span class="muted">+61 400 000 000</span></div> -->
+                        <div class="contact-item"><strong>Location</strong><span class="muted">Adelaide,
+                                Australia</span></div>
+                        <div class="contact-item"><strong>LinkedIn</strong><a href="https://www.linkedin.com/in/kulvir-jandu/" class="muted">/in/kulvir-jandu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:12px">
+                    <h3 class="section-title">Skills</h3>
+                    <div class="skills" aria-hidden>
+                        <span class="skill">Azure</span>
+                        <span class="skill">Linux</span>
+                        <span class="skill">Proxmox</span>
+                        <span class="skill">Docker</span>
+                        <span class="skill">PowerShell</span>
+                        <span class="skill">Networking</span>
+                        <span class="skill">Python (beginner → advancing)</span>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top:12px">
+                    <h3 class="section-title">Quick facts</h3>
+                    <ul class="muted">
+                        <li>13 years industry experience</li>
+                        <li>AZ-104 candidate</li>
+                        <li>Available for full-time roles</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+
+        <footer>
+            <div class="muted"></div>
+        </footer>
+    </div>
+
+    <script>
+        // Small UX: updated date + theme toggle + PDF download (print) helper
+        document.getElementById('updatedDate').textContent = new Date().toLocaleDateString(navigator.language, { year: 'numeric', month: 'long', day: 'numeric' });
+        const page = document.getElementById('page');
+        const themeBtn = document.getElementById('themeToggle');
+        themeBtn.addEventListener('click', () => { document.body.classList.toggle('dark') });
+
+
+        function downloadPDF(e) {
+            e.preventDefault();
+            // Use browser print to create PDF — lightweight, no server needed
+            window.print();
+        }
+
+
+        // Accessibility: keyboard shortcut T toggles theme
+        document.addEventListener('keydown', (ev) => { if (ev.key.toLowerCase() === 't') document.body.classList.toggle('dark') });
+    </script>
+</body>
+
+</html>
