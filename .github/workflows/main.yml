@@ -17,7 +17,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-            az storage blob upload-batch --account-name crcprod --auth-mode key -d '$web' -s . --overwrite
+            az storage blob upload-batch --account-name ksjanduwebresume --auth-mode key -d '$web' -s . --overwrite
            
   # Azure logout
     - name: logout
