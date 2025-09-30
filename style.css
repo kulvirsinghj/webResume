@@ -1,4 +1,4 @@
- :root {
+:root {
    --bg: #0f1724;
    /* dark bg */
    --card: #0b1220;
@@ -23,9 +23,9 @@
    color: #0b1220
  }
 
- .dark {
-   background: linear-gradient(180deg, #020617 0%, #071024 100%);
-   color: #e6eef8
+ body.dark, html.dark {
+  background: linear-gradient(180deg, #020617 0%, #071024 100%) !important;
+  color: #e6eef8 !important;
  }
 
  .container {

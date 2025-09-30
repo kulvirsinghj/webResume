@@ -35,7 +35,8 @@
                         style="background:transparent;border:1px solid rgba(0,0,0,0.06);color:inherit">Dark
                         Mode</button>
                 </div>
-                <div class="muted">Updated: <span id="updatedDate"></span></div>
+                <div class="muted">Date: <span id="updatedDate"></span></div>
+                <!-- <div class="muted">Viewed: <a id="counter"></a>times</div> --> <!-- view counter feature in progress -->
             </div>
         </header>
 
@@ -189,22 +190,39 @@
                 <div class="card" style="margin-top:12px">
                     <h3 class="section-title">Skills</h3>
                     <div class="skills" aria-hidden>
-                        <span class="skill">Azure</span>
-                        <span class="skill">Intune</span>
-                        <span class="skill">Microsoft 365</span>
-                        <span class="skill">Networking (DNS, DHCP, TCP/IP)</span>
-                        <span class="skill">Active Directory</span>
-                        <span class="skill">BigFix</span>
-                        <span class="skill">VMware</span>
-                        <span class="skill">Hyper-V</span>
-                        <span class="skill">Linux (Ubuntu, CentOS)</span>
-                        <span class="skill">Bash scripting</span>
-                        <span class="skill">Git</span>
-                        <span class="skill">Windows Server administration</span>
-                        <span class="skill">Proxmox</span>
-                        <span class="skill">Office 365</span>
-                        <span class="skill">PowerShell</span>
-                        <span class="skill">Troubleshooting</span>
+                        <strong>Infrastructure & System Administration</strong>
+                        <span class="skill">Windows Server</span>
+                        <span class="skill">Linux (Ubuntu, RHEL)</span>
+                        <span class="skill">Active Directory & Azure AD</span>
+                        <span class="skill">GPO migration to Entra ID</span>
+                        <span class="skill">Backup & Recovery</span>
+                        <span class="skill">Endpoint Management (Intune, Autopilot, SCCM, Android MDM)</span>
+                        <span class="skill">Device Security (Defender, EDR, AV)</span>
+                        <span class="skill">Policy Hardening</span>
+                        <br>
+                        <strong>Networking & Security</strong>
+                        <span class="skill">TCP/IP, DNS, DHCP, VLANs</span>
+                        <span class="skill">Firewall & VPN (Fortinet, Microsoft, Cisco)</span>
+                        <span class="skill">Cyber Security Policy (Essential 8, NIST)</span>
+                        <span class="skill">Incident Response</span>
+                        <span class="skill">Vulnerability Scanning</span>
+                        <br>
+                        <strong>Cloud & SaaS Platforms</strong>
+                        <span class="skill">Microsoft Azure</span>
+                        <span class="skill">SaaS (Microsoft 365, Atlassian, HR/Finance)</span>
+                        <br>
+                        <strong>DevOps & Automation</strong>
+                        <span class="skill">CI/CD (GitLab)</span>
+                        <span class="skill">Containerisation (Docker/Kubernetes)</span>
+                        <span class="skill">Software Packaging (Intune, BigFix)</span>
+                        <span class="skill">Scripting (PowerShell, Bash, Python)</span>
+                        <span class="skill">Git Version Control</span>
+                        <br>
+                        <strong>Professional Skills</strong>
+                        <span class="skill">Problem-solving</span>
+                        <span class="skill">Team Collaboration</span>
+                        <span class="skill">Communication</span>
+                        <span class="skill">Project & Change Management</span>
                     </div>
                 </div>
 
@@ -229,7 +247,15 @@
         document.getElementById('updatedDate').textContent = new Date().toLocaleDateString(navigator.language, { year: 'numeric', month: 'long', day: 'numeric' });
         const page = document.getElementById('page');
         const themeBtn = document.getElementById('themeToggle');
-        themeBtn.addEventListener('click', () => { document.body.classList.toggle('dark') });
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            document.documentElement.classList.toggle('dark'); // <-- Add this line
+            if (document.body.classList.contains('dark')) {
+                themeBtn.textContent = 'Light Mode';
+            } else {
+                themeBtn.textContent = 'Dark Mode';
+            }
+        });
 
 
         function downloadPDF(e) {
@@ -241,6 +267,21 @@
 
         // Accessibility: keyboard shortcut T toggles theme
         document.addEventListener('keydown', (ev) => { if (ev.key.toLowerCase() === 't') document.body.classList.toggle('dark') });
+
+        // // Counter feature
+        // window.addEventListener('DOMContentLoaded', (event) => {
+        //     getVistitCount();
+        // });
+
+        // const functionApi = "";
+
+        // const getVistitCount = () => {
+        //     fetch(functionApi)
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             document.getElementById('counter').innerHTML = data.value;
+        //         });
+        // };
     </script>
 </body>
 
