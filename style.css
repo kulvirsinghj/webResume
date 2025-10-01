@@ -197,7 +197,63 @@
    }
  }
 
- /* utility */
+ /* Extra mobile-friendly styles */
+@media (max-width:600px) {
+  .container {
+    padding: 8px;
+    margin: 0;
+    max-width: 100vw;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 18px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  main {
+    gap: 12px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .skills {
+    gap: 4px;
+  }
+
+  .skill {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .contact-list {
+    gap: 6px;
+  }
+
+  .project {
+    padding: 6px;
+  }
+}
+
+/* utility */
  .btn {
    display: inline-block;
    padding: 10px 14px;
